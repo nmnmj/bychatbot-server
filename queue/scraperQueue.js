@@ -2,7 +2,11 @@ const Queue = require('bull');
 require('dotenv').config();
 const { scrapeWebsite } = require('../services/scrapingService');
 const WebsitePage = require('../models/WebsitePage');
-const fetch = require("node-fetch");
+(async () => {
+  const fetch = (await import("node-fetch")).default;
+
+  // Use fetch here
+})();
 const cheerio = require("cheerio");
 const url = require("url");
 const { default: axios } = require('axios');

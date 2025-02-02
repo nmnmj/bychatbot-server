@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const app = express();
+app.use(cors()); 
 const passport = require('passport');
 require('./config/passport'); // Load strategies
 const expressSession = require("express-session")
@@ -13,8 +15,6 @@ const { connectRedis } = require('./config/redis');
 const configurePassport = require('./config/passportconfig');
 require('dotenv').config();
 
-const app = express();
-app.use(cors()); 
 
 app.use(passport.initialize());
 app.use(

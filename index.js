@@ -32,7 +32,7 @@ app.use(passport.session());
 configurePassport({
   googleClientID: process.env.GOOGLE_CLIENT_ID,
   googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  googleCallbackURL: "http://localhost:8000/api/auth/google/callback",
+  googleCallbackURL: "https://bychatbot-server.onrender.com/api/auth/google/callback",
   passport
 })
 
